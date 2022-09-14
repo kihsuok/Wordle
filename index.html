@@ -1,0 +1,44 @@
+<html lang="en">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- <div id="msg" style="display:none"><b> Magnficent !!!</b></div> -->
+
+    <div class="game-container">
+        <div class="title-container">
+            <h1>Wordle</h1>
+        </div>
+        <div class="message-container"></div>
+        <div class="btn-group p-3">
+            <a id="text" class="btn btn-info">Letters</a>
+            <a> </a>
+            <div type="number" id="size5" onclick='setsize(5)' class="btn btn-danger" aria-current="page">5</div>
+            <div type="number" id="size6" onclick='setsize(6)' class="btn btn-light">6</div>
+            <div type="number" id="size7" onclick="setsize(7)" class="btn btn-light">7</div>
+        </div>
+        <div id="win" class="card " style="color: aquamarine; display: none;">
+            <div class="card-body" style="color: aquamarine;">
+                <p class="card-text">Great!!, The word is <span id="displayword" style="color: rgb(243, 167, 14);"></span></p>
+                <div type="string" id="newgame" onclick="setsize(5)" class="btn btn-dark">New game</div>
+            </div>
+        </div>
+        <div id="lose" class="card " style="color: aquamarine; display: none;">
+            <div class="card-body" style="color: aquamarine;">
+                <p class="card-text">Sorry!!, The word was <span id="actualword" style="color: rgb(243, 167, 14);"></span></p>
+                <div type="string" id="replay" onclick="setsize(5)" class="btn btn-dark">New game</div>
+            </div>
+        </div>
+        <div class="tile-container"></div>
+        <div class="key-container"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
